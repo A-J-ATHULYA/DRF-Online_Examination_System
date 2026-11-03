@@ -1,0 +1,74 @@
+###
+GET http://127.0.0.1:8000/Questions/
+Accept: application/json
+
+###
+POST  http://127.0.0.1:8000/Questions/
+Content-Type: application/json
+
+{
+  "question": "Which Python keyword is used to handle exceptions?",
+  "option_a": "if",
+  "option_b": "for",
+  "option_c": "try",
+  "option_d": "def",
+  "correct_answer": "option_c"
+}
+
+###
+GET http://127.0.0.1:8000/Questions/1/
+Accept: application/json
+
+###
+PUT  http://127.0.0.1:8000/Questions/10/
+Content-Type: application/json
+
+{
+  "question": "Which data structure stores key-value pairs in Python?",
+  "option_a": "List",
+  "option_b": "Array",
+  "option_c": "Set",
+  "option_d": "Dictionary",
+  "correct_answer": "option_d"
+}
+
+
+###
+DELETE  http://127.0.0.1:8000/Questions/11/
+
+
+# Answer
+
+###
+GET http://127.0.0.1:8000/Answers/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/Answers/
+Content-Type: application/json
+
+{
+    "student_name" : "Rishi",         
+    "question_id" : "33",  
+    "selected_answer" : "option_c"
+}
+
+
+###
+GET http://127.0.0.1:8000/Answers/2/
+Accept: application/json
+
+
+###
+PUT  http://127.0.0.1:8000/Answers/2/
+Content-Type: application/json
+
+{
+  "student_name": "Arya",
+  "question_id": 1,
+  "selected_answer": "option_b"
+}
+
+
+###
+DELETE  http://127.0.0.1:8000/Answers/6/
